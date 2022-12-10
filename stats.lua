@@ -50,9 +50,9 @@ local playerStats = {
 local player = GetPlayerId()
 
 
--- on player join get all stats
+-- on player join get all stats from qbcore db
 function StatGetString(hash)
-    -- local player = GetPlayerId()
+    local player = GetPlayerId()
     -- when player joins get stats
     if (player == player) then
         for i, stat in ipairs(playerStats) do
@@ -87,6 +87,21 @@ function setStat(stat, value)
     local stat = SetStatInt(stat, value)
     return stat
 end
+
+
+-- statsave, statload, statloadpending, statdelete, statreset
+-- statslotisloaded, statsslotislocked, statsslotisnew
+-- statsslotisempty, statsslotisvalid, statsslotsetlocked
+-- statsslotsetnew, statsslotsetempty, statsslotsetvalid
+-- statsslotsetparentallocked, statsslotsetparentalunlocked
+-- statsslotsetranked, statsslotsetunranked, statsslotsetonline
+-- statsslotsetoffline, statsslotsetpublic, statsslotsetprivate
+-- statsslotsetleaderboards, statsslotsetnoleaderboards
+-- statsslotsetachievements, statsslotsetnoachievements
+-- statsslotsetcloud, statsslotsetnocloud, statsslotsettitle
+-- statsslotsetdescription, statsslotsetbadge, statsslotsetparental
+-- statsslotsetrank, statsslotsetonline, statsslotsetoffline
+-- statsslotsetpublic, statsslotsetprivate, statsslotsetleaderboards
 
 -- function getStatFloat(stat)
 --     local stat = GetStatFloat(stat)
